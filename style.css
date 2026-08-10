@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+  @font-face {
+  font-family: 'Big';
+  src: url('./assets/fonts/big.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Pixel';
+  src: url('./assets/fonts/pixel.ttf') format('truetype');
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('./assets/img/fondo.jpg'); /* ¡Espacio eliminado! */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: 'DotGothic16', monospace;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+ .pagina {
+  width: 680px;
+
+  /* --- Hacemos que el fondo de la caja sea invisible --- */
+  background: transparent;
+
+  border: 4px solid #f9b8d9;
+  min-height: 100vh;
+}
+
+
+
+.header {
+
+  border: 3px solid #f9b8d9;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+ .header-banner {
+  width: 100%;             /* Ocupa todo el ancho disponible */
+  height: 180px;           /* ¡Acá controlas qué tan fina es! Puedes probar con 100px o 150px */
+  object-fit: cover;       /* Magia pura: recorta la foto para que encaje sin deformarse */
+  object-position: center; /* Muestra el centro de la foto (puedes cambiarlo a 'top' o 'bottom') */
+  display: block;
+}
+
+.header-deco {
+  background: #fce4f0;
+  color: #B49470;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  padding: 3px 0;
+  text-align: center;
+  border-top: 2px solid #f9b8d9;
+  border-bottom: 2px solid #f9b8d9;
+  animation: brillar 2s ease-in-out infinite;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  background: #fff0f5;
+  border-top: 2px solid #f9b8d9;
+}
+
+.header-nav a {
+  font-size: 0.8rem;
+  color: #c2185b;
+  text-decoration: none;
+  padding: 5px 16px;
+  border-right: 1px solid #f9b8d9;
+}
+
+.header-nav a:first-child { border-left: 1px solid #f9b8d9; }
+.header-nav a:hover { background: #f9b8d9; color: #fff; }
+ .layout {
+  display: flex;
+  justify-content: center; /* Esto es la magia que centra tu columna única */
+  width: 100%;
+  border-top: 2px solid #f9b8d9;
+  min-height: 400px;
+}
+
+  .col-centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 100%; /* ¡Esta es la que obliga a la columna a ocupar el centro! */
+}
+
+
+
+
+.content-box {
+  background: #fff0f5; /* ¡Esto le da el mismo color de fondo que la otra caja! */
+  border-radius: 8px;
+  border: 2px solid #f9b8d9;
+  overflow: hidden;
+  margin-bottom: 8px;
+
+  /* Agregamos el mismo ancho que le dimos a la caja welcome para que queden iguales */
+  width: 100%;
+  max-width: 430px;
+}
+
+
+
+.sidebar {
+  border-right: 2px solid #f9b8d9;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #fff0f5;
+}
+
+
+.sidebar-box {
+  min-height: 80px;
+   border-radius: 8px;
+  border: 2px solid #f9b8d9;
+  overflow: hidden;
+  margin-bottom: 2px;
+}
+
+
+.sidebar-box p {
+
+  padding: 5px 8px;
+  color: #c2185b;
+  font-size: 0.8rem;
+  line-height: 2;
+  display: block;
+  border-bottom: 1px solid #fce4f0;
+}
+
+.box-titulo {
+  background: linear-gradient(90deg, #fce4f0, #fff0f5);
+  color: #c2185b;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #f9b8d9;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content-box {
+
+   border-radius: 8px;
+  border: 2px solid #f9b8d9;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.content-box .box-titulo {
+  background: linear-gradient(90deg, #f9b8d9, #fce4f0);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-bottom: 2px solid #f9b8d9;
+  text-shadow: 1px 1px 0px #c2185b;
+}
+
+
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.welcome-texto {
+  padding: 10px;
+  color: #555;
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+.proyecto {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.proyecto-img {
+  width: 80px;
+  height: 70px;
+  background: linear-gradient(135deg, #f9b8d9, #fff0f5);
+  border: 2px solid #f9b8d9;
+  flex-shrink: 0;
+  animation: flotar 4s ease-in-out infinite;
+}
+
+.proyecto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.proyecto-nombre {
+  font-size: 0.9rem;
+  color: #c2185b;
+  font-weight: bold;
+}
+
+.proyecto-desc {
+  font-size: 0.75rem;
+  color: #777;
+  line-height: 1.5;
+}
+
+.proyecto-btn {
+  font-size: 0.75rem;
+  color: #fff;
+  background: #f9b8d9;
+  border: 2px outset #fce4f0;
+  padding: 3px 10px;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+}
+
+.proyecto-btn:active { border: 2px inset #fce4f0; }
+.proyecto-btn:hover { background: #c2185b; }
+
+.contacto-grid {
+  display: flex;
+  gap: 6px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.contacto-btn {
+  font-size: 0.8rem;
+  color: #c2185b;
+  text-decoration: none;
+  padding: 4px 12px;
+  border: 2px outset #f9b8d9;
+  background: #fff0f5;
+}
+
+.contacto-btn:active { border: 2px inset #f9b8d9; }
+.contacto-btn:hover { background: #f9b8d9; color: #fff; }
+.header-medio {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background: #fdf6f0;
+  border-bottom: 2px solid #f9b8d9;
+}
+.header-cuadrado {
+  width: 200px;
+  height: 200px;
+  border: 3px solid #f9b8d9;
+  background: #fce4f0;
+}
+.header-fino {
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(90deg, #f9b8d9, #fff0f5, #f9b8d9);
+  border-bottom: 2px solid #f9b8d9;
+}
+ .header-info {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid #f9b8d9;
+  background: #fdf6f0;
+}
+.header-cuadrado {
+  width: 140px;
+  height: 140px;
+  border-right: 2px solid #f9b8d9;
+  background: #fce4f0;
+  flex-shrink: 0;
+}
+.header-texto {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+.header-nombre {
+  font-size: 1.4rem;
+  color: #c2185b;
+  letter-spacing: 2px;
+}
+.header-frase {
+  font-size: 0.75rem;
+  color: #888;
+  font-style: italic;
+}
+.header-estado {
+  font-size: 0.8rem;
+  color: #4caf50;
+  animation: brillar 2s ease-in-out infinite;
+}
+.header-fino {
+  width: 100%;
+  height: 12px;
+  background: linear-gradient(90deg, #f9b8d9, #fff0f5, #f9b8d9, #fff0f5, #f9b8d9);
+}
+.col-der {
+  border-left: 2px solid #f9b8d9;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #fff0f5;
+  min-width: 0;
+}
+.nav-link {
+  display: block;
+  padding: 6px 8px;
+  color: #c2185b;
+  text-decoration: none;
+  font-size: 0.75rem;
+  border-bottom: 1px solid #fce4f0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+.nav-link:hover {
+  background: #f9b8d9;
+  color: #fff;
+  padding-left: 14px;
+}
+
+.welcome-box {
+  background: #fff0f5;
+  border-radius: 8px;
+  border: 2px solid #f9b8d9;
+  padding: 15px;
+  text-align: center;
+    min-height: 180px; /* Esto obliga a la caja a mantenerse inflada aunque no tenga texto */
+
+  margin-bottom: 20px; /* Le di un poquito más de espacio abajo para que no queden pegadas */
+
+  /* --- Estas dos líneas hacen que el tamaño sea idéntico al menú --- */
+  width: 100%;
+  max-width: 430px;
+   position: relative; /* ✦ ESTO ES LO MÁS IMPORTANTE ✦ */
+  overflow: hidden;   /* Esto evita que los corazones se escapen de la caja */
+}
+
+ .welcome-titulo {
+  font-size: 3.5rem; /* Vi que lo bajaste a 3rem, ¡perfecto si te gusta más así! */
+  color: #FFC0CB;
+
+  margin-top: 45px; /* ✦ Esto le saca el margen de arriba, abajo y los costados ✦ */
+  margin-bottom: 0px;
+  line-height: 1; /* ✦ Esto aplasta la "caja invisible" de la fuente ✦ */
+
+  font-family: 'Big', sans-serif !important;
+  animation: flotar 3s ease-in-out infinite;
+  letter-spacing: 3px;
+  font-weight: bold;
+   text-shadow: 1px 1px 0 #664229, -1px -1px 0 #664229, 1px -1px 0 #664229;
+}
+
+
+.seccion-label {
+  font-size: 1rem;
+  color: #DB92BD;
+  padding: 6px 10px;
+  border-bottom: 1px dashed #f9b8d9;
+  margin-bottom: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+@keyframes flotar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes brillar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.foto-box {
+  border: 2px solid #f9b8d9;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.foto-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.foto-lateral {
+  min-height: 200px;
+  overflow: hidden;
+  padding: 0;
+}
+.foto-lateral-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+
+.centro-top {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.foto-lateral-vacia {
+  width: 100%;
+  height: 220px;
+  background: #fce4f0;
+}
+
+.contador-num {
+  font-family: monospace;
+  font-size: 1rem;
+  color: #c2185b;
+  text-align: center;
+  letter-spacing: 3px;
+  padding: 4px 8px;
+}
+.mp3-barra {
+  height: 4px;
+  background: #fce4f0;
+  border: 1px solid #f9b8d9;
+  margin: 6px 8px;
+}
+.mp3-progreso {
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(90deg, #f9b8d9, #c2185b);
+  animation: progreso 8s linear infinite;
+}
+@keyframes progreso {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+.yuzu-img {
+  background: linear-gradient(135deg, #b3e0f9, #e0f4ff);
+  border-color: #7ec8e3;
+}
+/* --- Estilos para las nuevas categorías --- */
+.categorias-grid {
+  display: flex;
+  flex-direction: column; /* Pone los botones uno debajo del otro */
+  gap: 12px;
+  padding: 15px;
+}
+/* --- Reacción al tocar en el celular --- */
+.categoria-link:active {
+  transform: scale(0.95); /* El botón se encoge un poquito al tocarlo */
+  transition: transform 0.1s ease;
+}
+
+
+.categoria-link {
+  display: block;
+  text-align: center;
+  background: #fff0f5;
+  border: 2px dashed #AC773B;
+  color: #7E563B;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px;
+  transition: all 0.3s ease; /* Hace que la animación al pasar el mouse sea suave */
+}
+
+.categoria-link:hover {
+  background: #f9b8d9;
+  color: #fff;
+  border: 2px solid #c2185b;
+  transform: translateY(-2px); /* Un pequeño salto al pasar el mouse */
+  box-shadow: 2px 2px 0px #fce4f0;
+}
+ /* --- Capa de Filtro Granulado --- */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Esto genera el ruido directamente con código */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.05; /* ✦ Intensidad del granulado (prueba con 0.1 si lo quieres más fuerte) */
+  pointer-events: none; /* ✦ ¡Crucial! Evita que el filtro bloquee tus clics en los botones */
+  z-index: 9999;
+}
+ /* --- Estilos para la página Sobre Mí --- */
+ .bio-box {
+  width: 100%;
+  max-width: 650px;
+  padding: 30px;
+  text-align: left;
+
+  /* ✦ ¡Esta línea es la que centra la caja mágicamente! ✦ */
+  margin: 0 auto;
+}
+
+
+.bio-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start; /* Alinea la foto y el texto arriba */
+  margin-bottom: 25px;
+}
+
+.bio-foto {
+  width: 140px;
+  height: 140px;
+  object-fit: cover; /* Evita que tu foto se deforme */
+  border-radius: 15px; /* Bordes redondeados súper suaves */
+  border: 3px dashed #f9b8d9;
+  box-shadow: 4px 4px 0px #fff; /* Sombrita blanca estilo sticker */
+}
+
+.bio-der p {
+  color: #664229; /* El color chocolate que elegimos antes */
+  margin-bottom: 12px;
+  line-height: 1.6; /* Le da aire entre los renglones para que no se vea amontonado */
+  font-size: 1.1rem;
+}
+
+.bio-der strong {
+  color: #c2185b; /* Resalta el nombre en rosa oscuro */
+}
+
+/* --- Estilos para los hashtags --- */
+.bio-tags-container {
+  margin-top: 20px;
+  border-top: 2px dotted #f9b8d9;
+  padding-top: 15px;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap; /* Si no entran todos en un renglón, pasan al de abajo */
+  gap: 10px;
+  margin-top: 12px;
+  margin-bottom: 25px;
+}
+
+.tag {
+  background: #f9b8d9;
+  color: #664229;
+  padding: 6px 12px;
+  border-radius: 20px; /* Forma de píldora redondita */
+  font-size: 0.95rem;
+  font-weight: bold;
+  border: 1px solid #c2185b;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  background: #c2185b;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* --- Botón de volver --- */
+.btn-volver {
+  display: inline-block;
+  background: #fff;
+  color: #664229;
+  padding: 8px 16px;
+  border: 2px solid #f9b8d9;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+  background: #fce4f0;
+  border-color: #664229;
+}
+ /* Contenedor que mantiene los corazones dentro de la caja */
+.heart-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* Esto evita que los corazones bloqueen el clic */
+  z-index: 0; /* Asegura que estén detrás del texto */
+}
+
+.heart {
+  position: absolute;
+  color: #f9b8d9;
+  font-size: 15px;
+  animation: floatUp 5s linear infinite;
+}
+
+/* Posiciones iniciales y tiempos diferentes para que no se vean robóticos */
+.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 30%; animation-delay: 2s; }
+.heart:nth-child(3) { left: 60%; animation-delay: 1s; }
+.heart:nth-child(4) { left: 85%; animation-delay: 3s; }
+
+/* La animación que los hace subir */
+@keyframes floatUp {
+  0% { transform: translateY(100px); opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { transform: translateY(-50px); opacity: 0; }
+}
