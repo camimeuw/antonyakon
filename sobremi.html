@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ✦ ACA FALTABA ESTA CAJA MAESTRA ✦ -->
+
   <div class="pagina">
 
     <header class="header">
@@ -20,17 +20,34 @@
         <!-- Caja de Sobre Mí -->
         <div class="content-box bio-box">
 
-          <div class="bio-layout">
-            <div class="bio-izq">
-              <!-- Asegúrate de tener una foto llamada perfil.jpg en tu carpeta img -->
-              <img src="./assets/img/bio.jpg" alt="foto perfil" class="bio-foto" />
+          <div class="bio-contenedor">
+
+            <!-- ✦ PARTE DE ARRIBA: Foto y Nombre lado a lado ✦ -->
+            <div class="bio-cabecera">
+              <img src="./assets/img/bio.jpg" alt="Antonia Kon" class="bio-foto" />
+
+              <!-- ✦ Envolvemos los textos para que se ordenen bien al lado de la foto ✦ -->
+              <div class="bio-textos">
+
+                <h3 class="bio-nombre">
+                  Antonia Kon
+                  <img src="./assets/img/makeup.png" alt="maquillaje" class="icono-makeup" />
+                </h3>
+
+                <span class="bio-sub">(Buenos Aires, 2000)</span>
+
+              </div>
             </div>
 
-            <div class="bio-der">
-              <p><strong>Antonia Kon (Buenos Aires, 2000).</strong> Empecé a trabajar como periodista a mis 18 años, en el suplemento SOY de Página 12. Desde entonces publiqué artículos en medios locales como Rolling Stone, La Agenda y Revista Viva, y en revistas internacionales como Gatopardo. El periodismo me acercó a la escritura ensayística: me interesan las subjetividades femeninas en el mundo digital, las subculturas (especialmente las que pertenecen al mundo otaku/geek) y su influencia en latinoamérica, la literatura gótica del siglo XIX, la ternura como experiencia estética, la sensibilidad hyperpop y las intersecciones entre la teoría y la cultura pop.</p>
+            <!-- ✦ PARTE DE ABAJO: El texto completo fluyendo normal ✦ -->
+            <div class="bio-cuerpo">
+              <p>Empecé a trabajar como periodista a mis 18 años, en el suplemento SOY de Página 12. Desde entonces publiqué artículos en medios locales como Rolling Stone, La Agenda y Revista Viva, y en revistas internacionales como Gatopardo.</p>
+
+              <p>El periodismo me acercó a la escritura ensayística: me interesan las subjetividades femeninas en el mundo digital, las subculturas (especialmente las que pertenecen al mundo otaku/geek) y su influencia en latinoamérica, la literatura gótica del siglo XIX, la ternura como experiencia estética, la sensibilidad hyperpop y las intersecciones entre la teoría y la cultura pop.</p>
 
               <p>Soy co-autora del libro <em>Sobre el trabajo de Yael Desbats</em> (2023), editado por la editorial dedicada a artistas argentinos Actividad de Uso, y autora del poemario <em>Aprendiz de hada</em> (2024), publicado por la editorial Pequeña Fortuna. Ambos son experimentos de creación colectiva y de traducción (al coreano y al japonés respectivamente). Actualmente curso los últimos años de la Licenciatura en Artes de la Escritura en la UNA, edito la revista digital Vida Cotidiana, coordino eventos culturales relacionados con la literatura y escribo una columna que sale todos los meses en La Agenda.</p>
             </div>
+
           </div>
 
           <!-- Sección de hashtags -->
@@ -53,6 +70,7 @@
 
       </main>
     </div>
-  </div> <!-- Fin de la caja maestra .pagina -->
+  </div>
+
 </body>
 </html>
