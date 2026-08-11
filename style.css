@@ -198,7 +198,7 @@ a:hover {
 }
 
 .welcome-titulo {
-  font-size: 2.6rem; /* ✦ Achicado para que entre en el celular ✦ */
+  font-size: 2.9rem; /* ✦ Achicado para que entre en el celular ✦ */
   color: #FFC0CB;
   margin-top: 45px;
   margin-bottom: 0px;
@@ -436,6 +436,12 @@ a:hover {
   100% { transform: translateY(0px) rotate(10deg); }
 }
 
+@keyframes flotar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
+
 /* --- Hashtags de la Bio --- */
 .bio-tags-container {
   margin-top: 20px;
@@ -484,4 +490,53 @@ a:hover {
 .btn-volver:hover {
   background: #fce4f0;
   border-color: #664229;
+}
+
+/* --- Arte ASCII --- */
+.ascii-contenedor {
+  display: flex;
+  justify-content: center; /* Centra el dibujo en la caja */
+  margin-top: -15px;
+  position: relative;
+  z-index: 2; /* Para que quede por encima de los corazones flotantes */
+}
+
+.ascii-art {
+  font-family: 'DotGothic16', monospace; /* Usamos la fuente cuadradita que ya tenés */
+  color: #c2185b; /* El rosa oscuro de tus textos */
+  font-size: 0.8rem;
+  line-height: 1.1;
+
+  /* Le sacamos el fondo gris que a veces le ponen los navegadores por defecto a <pre> */
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  /* Un pequeño movimiento flotante para que tenga vida */
+  animation: flotar 4s ease-in-out infinite;
+}
+
+/* ✦ FUENTE PIXELADA PARA LAS SUB-CATEGORÍAS Y TEXTOS ✦ */
+.categoria-link,
+.acordeon-titulo,
+.bio-cuerpo p {
+  /* Usamos la misma fuente retro que tienen "archivos" y "contacto" */
+  font-family: 'DotGothic16', monospace !important;
+  font-size: 1rem;
+}
+
+/* ✦ MOÑITOS AUTOMÁTICOS PARA LA LISTA DE TEXTOS ✦ */
+.link-texto::before {
+  content: '୨୧ '; /* El moñito coquette */
+  color: #c2185b; /* El color rosa para que combine */
+  font-size: 1rem;
+  margin-right: 6px;
+  vertical-align: middle; /* Para que quede alineado con el texto */
+}
+
+/* ✦ UN POQUITO DE ESPACIO ENTRE LOS TEXTOS ✦ */
+.link-texto {
+  display: block; /* Asegura que cada texto ocupe su propio renglón */
+  padding-bottom: 4px; /* Le da aire entre un texto y el de abajo */
 }
