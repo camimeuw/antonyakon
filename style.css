@@ -199,7 +199,7 @@ a:hover {
 
 .welcome-titulo {
   font-size: 2.9rem; /* ✦ Achicado para que entre en el celular ✦ */
-  color: #FFC0CB;
+  color: #834f23;
   margin-top: 45px;
   margin-bottom: 0px;
   line-height: 1;
@@ -207,7 +207,7 @@ a:hover {
   animation: flotar-texto 3s ease-in-out infinite;
   letter-spacing: 1px;
   font-weight: bold;
-  text-shadow: 1px 1px 0 #664229, -1px -1px 0 #664229, 1px -1px 0 #664229;
+  text-shadow: 1px 1px 0 #FEC7F9, -1px -1px 0 #DB9CE0, 1px -1px 0 #EEAEF1;
 }
 
 @keyframes flotar-texto {
@@ -279,14 +279,15 @@ a:hover {
   display: block;
   text-align: center;
   background: #fff0f5;
-  border: 2px dashed #AC773B;
-  color: #7E563B;
+  border: 2px dashed #6d3c11;
+  color: #623307;
   text-decoration: none;
   font-size: 1rem;
   font-family:'Big';
   font-weight: bold;
   padding: 12px;
   transition: all 0.3s ease;
+  border-radius: 15px;
 }
 
 .categoria-link:active {
@@ -412,7 +413,7 @@ a:hover {
 }
 
 .bio-cuerpo p {
-  color: #664229;
+  color: #623307;
 
   font-size: 1.1rem;
   line-height: 1.6;
