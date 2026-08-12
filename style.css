@@ -34,6 +34,13 @@ body {
   overflow-x: hidden; /* ✦ Evita la franja negra en el celular ✦ */
 }
 
+/* ✦ En mobile dejamos el fondo anterior (cuadrille/lunares) ✦ */
+@media (max-width: 600px) {
+  body {
+    background-image: url('./assets/img/fondo-mobile.jpg');
+  }
+}
+
 /* --- Capa de Filtro Granulado --- */
 body::after {
   content: "";
