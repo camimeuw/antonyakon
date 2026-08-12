@@ -110,9 +110,10 @@ a:hover {
   display: block;
 }
 
-/* ✦ En mobile sacamos la portada de anime y dejamos solo la franja decorativa ✦ */
+/* ✦ En mobile sacamos la portada de anime y la franja de estrellitas ✦ */
 @media (max-width: 600px) {
-  .header-banner {
+  .header-banner,
+  .header-deco {
     display: none;
   }
 }
@@ -362,14 +363,14 @@ a:hover {
 }
 
 .link-texto {
-  color: #c2185b;
+  color: #664229;
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.2s ease;
 }
 
 .link-texto:hover, .link-texto:active {
-  color: #664229;
+  color: #c2185b;
   text-decoration: underline;
   text-decoration-style: dashed;
 }
