@@ -110,6 +110,13 @@ a:hover {
   display: block;
 }
 
+/* ✦ En mobile sacamos la portada de anime y dejamos solo la franja decorativa ✦ */
+@media (max-width: 600px) {
+  .header-banner {
+    display: none;
+  }
+}
+
 .header-deco {
   background: #fce4f0;
   color: #B49470;
