@@ -82,6 +82,13 @@ body::after {
   animation: fadeIn 0.4s ease-out; /* Entrada suave y rápida */
 }
 
+/* ✦ En desktop sacamos el marco rosa que quedaba de cuando estaba el header ✦ */
+@media (min-width: 601px) {
+  .pagina {
+    border: none;
+  }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
