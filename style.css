@@ -31,18 +31,16 @@ body {
   font-size: 12px;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* ✦ Evita que la caja se estire de más y cuelguen los bordes ✦ */
-  overflow-x: hidden; /* ✦ Evita la franja negra en el celular ✦ */
+  align-items: flex-start;
+  overflow-x: hidden;
 }
 
-/* ✦ En mobile dejamos el fondo anterior (cuadrille/lunares) ✦ */
 @media (max-width: 600px) {
   body {
     background-image: url('./assets/img/fondo-mobile.jpg');
   }
 }
 
-/* --- Capa de Filtro Granulado --- */
 body::after {
   content: "";
   position: fixed;
@@ -56,7 +54,6 @@ body::after {
   z-index: 9999;
 }
 
-/* --- Barra de Scroll Retro Y2K --- */
 ::-webkit-scrollbar {
   width: 14px;
   background: #fce4f0;
@@ -73,16 +70,14 @@ body::after {
   background: #f9b8d9;
 }
 
-/* --- Estructura Principal --- */
 .pagina {
   width: 100%;
-  max-width: 680px; /* ✦ Magia responsive para compu y celu ✦ */
+  max-width: 680px;
   background: transparent;
   border: 4px solid #f9b8d9;
-  animation: fadeIn 0.4s ease-out; /* Entrada suave y rápida */
+  animation: fadeIn 0.4s ease-out;
 }
 
-/* ✦ En desktop sacamos el marco rosa que quedaba de cuando estaba el header ✦ */
 @media (min-width: 601px) {
   .pagina {
     border: none;
@@ -102,7 +97,6 @@ a:hover {
   opacity: 0.8;
 }
 
-/* --- Layout Principal --- */
 .layout {
   display: flex;
   justify-content: center;
@@ -139,12 +133,6 @@ a:hover {
   font-weight: bold;
 }
 
-.box-titulo img {
-  image-rendering: pixelated;
-  margin-bottom: 2px;
-}
-
-/* --- Caja de Bienvenida (Index) --- */
 .welcome-box {
   background: #fff0f5;
   border-radius: 8px;
@@ -160,7 +148,7 @@ a:hover {
 }
 
 .welcome-titulo {
-  font-size: 2.9rem; /* ✦ Achicado para que entre en el celular ✦ */
+  font-size: 2.9rem;
   color: #834f23;
   margin-top: 45px;
   margin-bottom: 0px;
@@ -178,14 +166,6 @@ a:hover {
   100% { transform: translateY(0px); }
 }
 
-.welcome-texto {
-  padding: 10px;
-  color: #555;
-  font-size: 0.8rem;
-  line-height: 1.8;
-}
-
-/* --- Corazones y WiFi --- */
 .heart-container {
   position: absolute;
   top: 0;
@@ -229,7 +209,6 @@ a:hover {
   100% { opacity: 1; }
 }
 
-/* --- Botones de Categorías --- */
 .categorias-grid {
   display: flex;
   flex-direction: column;
@@ -265,7 +244,6 @@ a:hover {
   box-shadow: 2px 2px 0px #fce4f0;
 }
 
-/* --- Acordeones (Textos y Proyectos) --- */
 .acordeon-container {
   display: flex;
   flex-direction: column;
@@ -288,7 +266,7 @@ a:hover {
 }
 
 .acordeon-titulo {
-  font-family: 'Big', cursive !important; /* ✦ Fuente Cheri aplicada ✦ */
+  font-family: 'Big', cursive !important;
   color: #664229;
   font-size: 1.3rem;
   font-weight: bold;
@@ -329,7 +307,6 @@ a:hover {
   text-decoration-style: dashed;
 }
 
-/* --- Sección Sobre Mí --- */
 .bio-box {
   width: 100%;
   max-width: 650px;
@@ -360,7 +337,7 @@ a:hover {
   align-items: center;
   gap: 10px;
   color: #c2185b;
-  font-family: 'Cheri', cursive !important; /* ✦ Fuente Cheri aplicada ✦ */
+  font-family: 'Cheri', cursive !important;
   font-size: 1.5rem;
   margin: 0;
   flex-wrap: wrap;
@@ -376,7 +353,6 @@ a:hover {
 
 .bio-cuerpo p {
   color: #623307;
-
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 15px;
@@ -386,7 +362,6 @@ a:hover {
   color: #c2185b;
 }
 
-/* --- Sticker de Maquillaje --- */
 .icono-makeup {
   width: 70px;
   transform-origin: center;
@@ -405,39 +380,6 @@ a:hover {
   100% { transform: translateY(0px); }
 }
 
-/* --- Hashtags de la Bio --- */
-.bio-tags-container {
-  margin-top: 20px;
-  border-top: 2px dotted #f9b8d9;
-  padding-top: 15px;
-}
-
-.tags-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 12px;
-  margin-bottom: 25px;
-}
-
-.tag {
-  background: #f9b8d9;
-  color: #664229;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.95rem;
-  font-weight: bold;
-  border: 1px solid #c2185b;
-  transition: all 0.2s ease;
-}
-
-.tag:hover {
-  background: #c2185b;
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-/* --- Botón Volver --- */
 .btn-volver {
   display: inline-block;
   background: #fff;
@@ -455,51 +397,42 @@ a:hover {
   border-color: #664229;
 }
 
-/* --- Arte ASCII --- */
 .ascii-contenedor {
   display: flex;
-  justify-content: center; /* Centra el dibujo en la caja */
+  justify-content: center;
   margin-top: -15px;
   position: relative;
-  z-index: 2; /* Para que quede por encima de los corazones flotantes */
+  z-index: 2;
 }
 
 .ascii-art {
-  font-family: 'DotGothic16', monospace; /* Usamos la fuente cuadradita que ya tenés */
-  color: #c2185b; /* El rosa oscuro de tus textos */
+  font-family: 'DotGothic16', monospace;
+  color: #c2185b;
   font-size: 0.8rem;
   line-height: 1.1;
-
-  /* Le sacamos el fondo gris que a veces le ponen los navegadores por defecto a <pre> */
   background: transparent;
   border: none;
   margin: 0;
   padding: 0;
-
-  /* Un pequeño movimiento flotante para que tenga vida */
   animation: flotar 4s ease-in-out infinite;
 }
 
-/* ✦ FUENTE PIXELADA PARA LAS SUB-CATEGORÍAS Y TEXTOS ✦ */
 .categoria-link,
 .acordeon-titulo,
 .bio-cuerpo p {
-  /* Usamos la misma fuente retro que tienen "archivos" y "contacto" */
   font-family: 'DotGothic16', monospace !important;
   font-size: 1rem;
 }
 
-/* ✦ MOÑITOS AUTOMÁTICOS PARA LA LISTA DE TEXTOS ✦ */
 .link-texto::before {
-  content: '୨୧ '; /* El moñito coquette */
-  color: #c2185b; /* El color rosa para que combine */
+  content: '୨୧ ';
+  color: #c2185b;
   font-size: 1rem;
   margin-right: 6px;
-  vertical-align: middle; /* Para que quede alineado con el texto */
+  vertical-align: middle;
 }
 
-/* ✦ UN POQUITO DE ESPACIO ENTRE LOS TEXTOS ✦ */
 .link-texto {
-  display: block; /* Asegura que cada texto ocupe su propio renglón */
-  padding-bottom: 4px; /* Le da aire entre un texto y el de abajo */
+  display: block;
+  padding-bottom: 4px;
 }

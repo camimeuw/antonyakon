@@ -16,7 +16,6 @@
         <div class="content-box">
           <p class="seccion-label">índice de textos ✦</p>
 
-          <!-- ✦ Esta caja arranca vacía, el script la va a llenar leyendo tu Google Sheets ✦ -->
           <div id="contenedor-textos" class="acordeon-container">
              <p style="text-align:center; color:#f9b8d9;">cargando textos mágicamente... ✿</p>
           </div>
@@ -28,32 +27,25 @@
     </div>
   </div>
 
-  <!-- 1. Importamos PapaParse para leer el CSV perfecto -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
-  <!-- 2. Nuestro script que conecta con tu Google Sheets -->
   <script>
-    // Tu link exacto
     const urlCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR2FJXWky5cLhA3MCA0K36xRaUm1C7Iq2j1FjNsCHE_ESsVFwYefIkLQBF8dIulQ44HduLpm7ZoLjHx/pub?output=csv";
 
     Papa.parse(urlCSV, {
       download: true,
       header: false,
       complete: function(resultados) {
-
-        // Quitamos la primera fila porque son los títulos
         const filas = resultados.data.slice(1);
         const contenedor = document.getElementById('contenedor-textos');
         let htmlFinal = '';
 
-        // Aquí vamos a guardar todo ordenadito
         const agrupado = {};
 
         filas.forEach(fila => {
           if (fila.length >= 4 && fila[0]) {
             const categoriaPrincipal = fila[0].trim().toLowerCase();
 
-            // ✦ FILTRO: Solo dejamos pasar los que digan "Textos" o "textos" en la primera columna
             if (categoriaPrincipal === "textos") {
               const subcategoria = fila[1].trim();
 
@@ -65,7 +57,6 @@
           }
         });
 
-        // Armamos el diseño HTML de los acordeones
         for (let subcat in agrupado) {
           htmlFinal += `
             <details class="acordeon">
